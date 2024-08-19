@@ -13,7 +13,6 @@ El backend se implementa con Node.js y Express, permitiendo la funcionalidad de 
 - **Angular 18 con SSR**: Utiliza la versión más reciente de Angular para garantizar el rendimiento y la experiencia de usuario mejorada con Server-Side Rendering.
 - **Node.js con Express**: Backend robusto y eficiente para manejar las peticiones del formulario de contacto.
 - **Nodemailer**: Permite la integración con servicios de correo para manejar las consultas de contacto directamente desde la web.
-- **Diseño Moderno**: Utiliza Material Design 3 para proporcionar una interfaz de usuario moderna y atractiva.
 
 ## Sitio Web
 
