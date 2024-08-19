@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+@import '_variables';
+
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    text-decoration: none;
+    scroll-behavior: smooth; //hace que el desplazamiento en tu página sea suave y animado en lugar de brusco.
+    outline: none; //elimina el contorno visible alrededor de los elementos enfocados, como los enlaces clicados. 
+}
+
+html, body { height: 100%;}
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+
+    body{
+        background-color: $background-color;
+        color: $color-text;
+        a{
+            text-decoration: none;
+        }
+        p{
+            font-size: 1.7rem;
+            line-height: 1.5;
+        }
+}
+
+::-webkit-scrollbar {
+    width: 15px; /* Ancho de la barra de desplazamiento */
+
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-main; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.048); 
+    //  width: 50px;
+}
+
+}
+@media(max-width: 1285px){
+    html{
+        font-size: 55%;
+    }
+}

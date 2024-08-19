@@ -1,0 +1,78 @@
+@defer (on timer(1200ms)) {
+<section class="contact" id="contact">
+    
+    <div class="contact-content">
+    <div class="box-info" data-aos="fade-up"  data-aos-duration="1500" data-aos-easing="ease-in-sine">
+        <h2 class="heading">Contacto</h2>
+        <div class="information">
+       <p> <i class='bx bxs-phone'></i> +34 667285017</p>
+       <p><i class='bx bxs-envelope'></i> peperj7&#64;gmail.com</p> 
+       <p> <i class='bx bx-current-location'></i> Sitges, Barcelona</p>
+    </div></div>
+  <form class="box-formulario" [formGroup]="contactForm" (ngSubmit)="sendForm()">
+        <div class="contact__input-box" data-aos="fade-right"  data-aos-duration="1000" data-aos-easing="ease-in-sine">
+            <input type="text" formControlName="nombre" placeholder="Nombre"><i class='bx bxs-user'></i>    
+          </div>
+          @if (contactForm.get('nombre')?.invalid && (contactForm.get('nombre')?.dirty || contactForm.get('nombre')?.touched)) {
+              @if (contactForm.get('nombre')?.errors?.['required']) {
+                <small>El nombre es requerido</small>
+              }
+            }
+          <div class="contact__input-box" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+            <input type="email" formControlName="email" placeholder="Email"><i class='bx bxs-envelope' ></i>
+            
+          </div>
+          @if (contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)) {
+              @if (contactForm.get('email')?.errors?.['required']) {
+                <small class="contact__error">El email es requerido</small>
+              }
+              @if (contactForm.get('email')?.errors?.['email']) {
+                <small class="contact__error">Por favor ingrese un email válido</small>
+              }
+            }
+          <div class="contact__input-box" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+            <input type="text" formControlName="asunto" placeholder="Asunto"><i class='bx bxs-edit'></i>
+           
+          </div>
+           @if (contactForm.get('asunto')?.invalid && (contactForm.get('asunto')?.dirty || contactForm.get('asunto')?.touched)) {
+              @if (contactForm.get('asunto')?.errors?.['required']) {
+                <small class="contact__error">El asunto es requerido</small>
+              }
+            }
+          <div class="contact__input-box" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine">
+            <textarea formControlName="mensaje" cols="21" rows="7" placeholder="Escriba su mensaje..."></textarea>
+            
+          </div>
+          @if (contactForm.get('mensaje')?.invalid && (contactForm.get('mensaje')?.dirty || contactForm.get('mensaje')?.touched)) {
+              @if (contactForm.get('mensaje')?.errors?.['required']) {
+                <small class="contact__error">El mensaje es requerido</small>
+              }
+            }
+          <input class="contact__btn" data-aos="zoom-out-up" data-aos-duration="1500" data-aos-easing="ease-in-sine" data-aos-offset="0" type="submit" value="Enviar" [disabled]="contactForm.invalid">
+        </form>
+
+        @if (cargando()) {
+          <div class="spinner-container">
+            <div class="spinner"></div>
+          </div>
+        }
+      
+        @if (exito() === true) {
+          <div class="modal success-modal">
+            <p><span>✔</span> ¡Enviado!</p>
+          </div>
+        }
+        @if (exito() === false) {
+          <div class="modal error-modal">
+            <p><span>❌</span> Hubo un error al enviar el correo. Inténtelo de nuevo.</p>
+          </div>
+        }
+   </div>
+</section>} @placeholder {<p>Cargando formulario de contacto...</p>
+}
+
+@defer (on viewport) {
+  <app-footer></app-footer>
+} @placeholder {
+  <p>Cargando footer...</p>
+}

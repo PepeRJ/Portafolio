@@ -1,0 +1,127 @@
+@import '../../../../styles/variables';
+section{
+    padding: 10rem 13% 5rem;
+}
+.heading{
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 5rem;
+
+}
+.projects{
+
+    
+&__container{
+    display: grid;
+    gap: 3rem; 
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+
+}
+
+&__card{  
+    display: flex;
+    position: relative;
+    margin-top: 1.7rem;
+    margin-bottom: 2rem;
+    padding:2rem;
+    box-shadow: 0 0 2rem $color-main;
+    border-radius: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    // min-width: 330px;
+    overflow: hidden;
+    &:nth-child(even){
+        justify-self: center;
+    }
+
+}
+
+&__image img{
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+&__content{
+    width: 100%;
+}
+&__iconos {
+    display: flex;
+    gap: 1.5rem;
+img {
+    // font-size: 4rem;
+    height: 30px;
+    width: 30px;
+    margin-bottom: 1rem;
+}}
+&__buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+   
+    }
+    
+}
+i{
+    font-size: 2rem;
+}
+h2{
+    margin-top: 1.3rem;
+}
+
+a{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+// }
+
+@media (max-width: 1073px) {
+    .projects{
+    &__card{
+        justify-content: center;
+    &:nth-child(even){
+        justify-self: start;
+    
+}
+}
+&__iconos{
+    img{
+width: 22px;
+height:22px;
+    }
+
+}}}
+
+@media (max-width: 895px) {
+    .projects {
+      padding: 10rem 5% 0rem;
+
+      margin-top: 5rem;
+    }
+h2{
+    text-align: center !important;
+}}
+@media (max-width: 820px) {
+    .projects__container {
+      grid-template-columns: 1fr;
+      .projects__card{
+        justify-self: center;
+       
+        
+      }
+    }
+}
+@media (max-width: 400px) {
+    .projects__buttons {
+        gap: 0.3rem;
+    a{
+
+padding: 0.7rem 2.3rem !important;
+    }}
+}

@@ -1,0 +1,193 @@
+@import '../../../../styles/variables';
+
+.about {
+    padding: 10rem 13% 10rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+
+    &__img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            margin-top: 4rem;
+            border-radius: 4rem;
+            font-size: 1.6rem;
+            letter-spacing: 0.1rem;
+            background-color: black;
+            color: $color-main;
+            border: 2px solid $color-main;
+            box-shadow: 0 0 2rem transparent;
+            background-color: transparent;
+            font-weight: 600;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 0 0 50px $color-main;
+                background-color: $color-main;
+                color: black;
+            }
+        }
+
+        img {
+            border-radius: 50%;
+            width: 490px;
+            height: 490px;
+            box-shadow: 0 0 2rem $color-main;
+        }
+    }
+
+    &__img-mvl {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            border-radius: 50%;
+            width: 490px;
+            height: 490px;
+            box-shadow: 0 0 2rem $color-main;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        width: 600px;
+        margin: auto 0;
+    }
+
+    &__heading {
+        color: white;
+        font-size: 6rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+        text-align: center;
+        gap: 2rem;
+        color: $color-main;
+
+        &-item {
+            padding: 2rem 2rem;
+            border: 2px solid $color-main;
+            box-shadow: 0rem 2rem 0rem 0rem $color-main;
+            border-radius: 4rem;
+            margin-bottom: 2rem;
+            height: auto;
+        }
+
+        &-title {
+            color: $color-main;
+            text-shadow: 0 0 2rem black;
+            line-height: 1.5;
+            font-size: 2.8rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        &-subtitle {
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+    }
+
+    &__text {
+        p {
+            font-size: 1.7rem;
+            margin: 2rem 0;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .about {
+        padding-left: 7%;
+        padding-right: 7%;
+        gap: 5rem;
+    }
+    h1 {
+        font-size: 7rem !important;
+    }
+}
+@media (max-width: 1060px) {
+    .about {
+        &__img, &__img-mvl {
+            img {
+                width: 300px !important;
+                height: 350px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 895px) {
+    .about {
+        padding: 19rem 5% 7rem !important;
+        margin: 5rem 0rem;
+        gap: 3rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__img {
+            display: none !important;
+        }
+
+        &__img-mvl {
+            display: flex !important;
+            gap: 0rem;
+            margin-top: -2.5rem;
+
+            a {
+                margin-top: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            img {
+                width: 200px !important;
+                height: 200px !important;
+            }
+        }
+
+        &__heading {
+            padding-top: 2rem;
+            margin-top: 25rem;
+        }
+
+        &__content {
+            width: 100% !important;
+        }
+
+        &__text {
+            order: 1 !important;
+        }
+
+        &__box {
+            order: 2 !important;
+            margin-bottom: 25rem;
+        }
+    }
+
+    h1 {
+        line-height: 3;
+    }
+}
+      

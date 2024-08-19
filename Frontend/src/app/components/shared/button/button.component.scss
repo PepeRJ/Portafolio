@@ -1,0 +1,39 @@
+@import '../../../../styles/variables';
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 1rem;
+    gap: 1rem;
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:0.3rem;
+        padding: 1rem 2.8rem;
+        border-radius: 4rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+        background-color: $color-main;
+        color: black;
+        border: 2px solid $color-main;
+        box-shadow: 0 0 2rem transparent;
+        background-color: $color-main;
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        
+        &:hover{
+            box-shadow: 0 0 50px $color-main;
+            background-color: $color-main;
+            color: black;
+        }
+       
+    }
+    
+}
+@media (max-width: 1060px) {
+    .button a:hover {
+      box-shadow: 0 0 2rem transparent; /* Elimina el efecto de sombra */
+    }
+  }

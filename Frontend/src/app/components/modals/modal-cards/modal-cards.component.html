@@ -1,0 +1,38 @@
+<div class="modal-overlay"  >
+    <article class="project__card " data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500"  >
+      <span class="project__close-button" (click)="closeModal()" ><i class='bx bx-x'></i></span>
+      <div class="project__image">
+        <img [ngSrc]="imageUrl" [alt]="title" height="117" width="200" loading="lazy">
+      </div>
+      <div class="project__content">
+        <h2 class="project__title">{{title}}</h2>
+        <div class="projects__iconos">
+            @for (icon of icons; track $index) {
+                <img [ngSrc]="icon.src" [alt]="icon.alt" height="30" width="30" loading="lazy">
+            }
+        </div>
+        <p class="project__description">
+          {{description}}
+        </p>
+        @if (title === 'Ecommerce') {
+          @if(isLoading){
+            <div class="loading-spinner">
+              <div class="spinner"></div>
+            </div>}
+          <div class="project__video">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Eqd7I83r9pI" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen (load)="onVideoLoad()"></iframe>
+          
+          </div>
+        }
+      </div> 
+      <div class="projects__buttons">
+      @for (button of buttons; track $index) {
+          <app-button [href]="button.href" [icon]="button.icon" [text]="button.text"></app-button>
+        }
+      </div>
+ 
+    </article>
+  </div>

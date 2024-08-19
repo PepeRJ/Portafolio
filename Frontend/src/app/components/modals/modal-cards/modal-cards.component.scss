@@ -1,0 +1,179 @@
+@import '../../../../styles/variables';
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); 
+  z-index: 1000;
+  padding: 1rem 13%; 
+  
+}
+
+.project__card {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  top: 3rem;
+  margin-top: auto;
+   transform: translateY(5rem); 
+  margin-bottom: 6rem;
+  height: auto; 
+  width: 50%;
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 0 2rem $color-main;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+
+.project__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.project__image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2rem;
+  margin-top: 4rem;
+}
+
+.project__content {
+  width: 100%; 
+  padding: 20px;
+}
+
+.projects__iconos {
+  display: flex;
+  gap: 1.5rem;
+
+}
+
+.projects__iconos img {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 1rem;
+}
+
+.projects__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0 1rem;
+}
+
+.projects__buttons a {
+  display: inline-block;
+ justify-content: center;
+  padding: 1rem 2.8rem;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  background-color: black;
+  color: $color-main;
+  border: 2px solid $color-main;
+  box-shadow: 0 0 2rem transparent;
+  background-color: transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.projects__buttons a:hover {
+  box-shadow: 0 0 50px $color-main;
+  background-color: $color-main;
+  color: black;
+}
+
+.projects__buttons a:nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+.projects__buttons a:nth-child(1):hover {
+  box-shadow: 0 0 50px $color-main;
+  background-color: transparent;
+  color: $color-main;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; 
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: $color-main;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 895px) {
+  .modal-overlay {
+    justify-content: flex-start !important;
+    padding: 0rem 5% 0rem !important;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .project__card {
+    width: 100% !important;
+    height: auto !important; 
+    padding: 1rem 5% !important; 
+
+  }
+
+
+  .projects__iconos img {
+   
+  width: 22px;
+  height:22px;
+      }
+  }
+
+  .modal-overlay {
+    padding: 1rem;
+    
+  }
+
+  .project__content {
+    padding: 1rem;
+  }
+
+@media (max-width: 500px) {
+  .modal-overlay {
+    padding: 0rem 5% 0rem !important;
+  }
+
+  .project__card {
+    width: 100%; 
+    height: auto; 
+    padding: 0.5rem; 
+  }
+
+
+}

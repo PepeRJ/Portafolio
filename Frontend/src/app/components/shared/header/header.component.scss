@@ -1,0 +1,109 @@
+@import '../../../../styles/variables';
+
+.header{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 13% 4rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 11;
+
+    .logo{
+      font-size: 2rem;
+        color: $color-text;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.3 ease;
+
+        &:hover{
+            transform: scale(1.1)
+        }
+        & span{
+            text-shadow: 0 0 2rem $color-main;
+            color: $color-main;
+        }
+    }
+    .navbar a{
+        font-size: 1.8rem;
+        color: $color-text;
+        margin-left: 4rem;
+        font-weight: 500;
+        transition: 0.3s ease;
+        border-bottom: 3pxd solid transparent;
+
+        &:hover, &.active{
+         color: $color-main;
+         border-bottom: 3px solid $color-main;
+        }
+
+
+    }
+    #menu-icon {
+        font-size: 4rem;
+        color: $color-main;
+        display: none;
+    }
+    #close-icon {
+        font-size: 4rem;
+        color: $color-main;
+        display: none;
+    }
+}
+@media (max-width: 895px) {
+    .header{
+        padding: 3rem 8%;
+        
+        width: 100vw;
+        position: fixed;
+    }
+   
+    #menu-icon {
+      display: block !important;
+      cursor: pointer;
+      
+    }
+    #close-icon {
+        display: block !important;
+        cursor: pointer;
+        
+      }
+    
+    .navbar {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      padding: 1rem 3%;
+      width: 100%;
+      
+
+      background: rgba(0, 0, 0, 0.938);
+      backdrop-filter: blur(30px);
+      border-bottom-left-radius: 2rem;
+      border-left: 2px solid $color-main;
+      border-bottom: 2px solid $color-main;
+      display: none;
+      
+      &.active {
+        display: block;
+      }
+  
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: none !important;
+        font-size: 2.2rem;
+        margin: 3rem 0;
+        color: black;
+        text-align: center;
+        padding-right: 13%;
+
+        padding-bottom: 0.5rem;
+      }
+    }
+  }

@@ -1,0 +1,38 @@
+@defer (on timer(800ms)) {
+  <section class="about" id="about">
+        <div class="about__img" data-aos="flip-up" data-aos-duration="1500" data-aos-easing="ease-in-sine" data-aos-offset="0">       
+          <img ngSrc="/assets/images/pepe.jpg" alt="Pepe Ruiz" height="490" width="490" loading="lazy" > 
+         <app-button href="/assets/docs/curriculum.pdf" text="Currículum" color="#00ffee" backgroundColor="black"></app-button>
+         </div> 
+  
+  <div class="about__content" >    
+  <h2 class="about__heading">Sobre mí</h2>
+  
+  <div class="about__img-mvl" data-aos="flip-up" data-aos-duration="1500" data-aos-easing="ease-in-sine" data-aos-offset="0">       
+    <img ngSrc="/assets/images/pepe.jpg" alt="Pepe Ruiz" height="490" width="490" loading="lazy"> 
+    <app-button href="#contact" text="Currículum" color="#00ffee" backgroundColor="black"></app-button>
+    </div> 
+  
+          <div class="about__box" data-aos="fade-down"
+          data-aos-anchor-placement="top" data-aos-duration="2000" data-aos-offset="0">
+              
+            <div class="about__box-item">
+              <h3 class="about__box-title">Estudios</h3>
+              <h6 class="about__box-subtitle">Bachillerato</h6>
+              <h6 class="about__box-subtitle">FP Daw</h6>
+          </div>    
+          <div class="about__box-item">
+              <h3 class="about__box-title">Experiencia</h3>
+              <h6 class="about__box-subtitle">+ 6 meses Freelancer</h6>
+              <h6 class="about__box-subtitle">+ 2 proyectos con cliente</h6>
+          </div>
+        
+         </div>
+         <div class="about__text" data-aos="fade-up"
+         data-aos-anchor-placement="top" data-aos-duration="2000" data-aos-offset="0">
+          <p>Hola, mi nombre es Pepe Ruiz y llevo más de un año enfocado en el desarrollo frontend, utilizando el framework Angular. Desde que me gradué en Desarrollo de Aplicaciones Web, estoy centrado en poner en práctica todo lo que voy aprendiendo, creando proyectos personales y profesionales como freelancer</p>
+         </div>
+      </div>
+      
+  </section>
+  } @placeholder {<p>Cargando sobre mí...</p>}

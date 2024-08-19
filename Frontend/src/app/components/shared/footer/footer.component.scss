@@ -1,0 +1,127 @@
+@import '../../../../styles/variables';
+
+footer{
+    bottom:0;
+    width:100%;
+    padding: 40px 0;
+    background-color: rgba(255, 255, 255, 0.048);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+ .footer__social-media a{
+    color: $color-main;
+    background-color: black;
+    text-align: center;
+    font-size: 25px;
+    width:42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid $color-main;
+    margin: 0 10px;
+    margin-bottom: 2rem;
+    transition: 0.3s ease;
+
+
+ }
+ .footer__list {
+   display: flex;
+   flex-wrap: wrap;              
+   justify-content: center;      
+   width: 100%;                 
+   margin: 2rem 0;               
+   gap: 10px;                    
+
+   li {
+       font-size: 18px;
+       line-height: 1.6;
+       text-align: center;
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       padding: 10px 15px;
+     a{
+        color: white;
+        border-bottom: 3px solid transparent;
+        transition: 0.3s ease-in-out;
+        
+        
+    }
+ }
+}
+
+ .footer__copyright{
+    margin-top:3rem;
+    font-size: 12px;
+
+ }
+}
+
+@media (hover: hover) {
+   .footer__social-media a:hover {
+      transform: rotate(360deg);
+      color: $color-main!important;
+      background-color: black !important;
+      box-shadow: 0 0 4rem $color-main;
+   }
+   .footer__list li a:hover{
+      color: $color-main !important;
+      border-bottom: 3px solid $color-main !important;
+   }
+   .footer__privacidad a:hover{
+      color: $color-main !important;
+   }
+}
+
+@media (hover: none) {
+   .footer__social-media a:active {
+      transform: rotate(360deg);
+      color: $color-main !important;
+      background-color: black !important;
+      box-shadow: 0 0 4rem $color-main;
+   }
+   .footer__list li a:active{
+      color: $color-main !important;
+      border-bottom: 3px solid $color-main !important;
+   }
+    .footer__privacidad a:active{
+       color: $color-main !important;
+    }
+}
+@media (hover: none) {
+
+   }
+@media(max-width: 991px){
+   .footer{
+    padding: 2rem 3%;
+    .footer__social-media{
+      padding-top: 2rem;
+      
+    }
+   }
+   }
+
+   @media(max-width: 600px){
+      
+      .footer {
+      .footer__social-media a{
+         margin-bottom: 1.4rem;
+
+    
+      }
+
+   .footer__list li {
+   line-height: 0.9;
+
+   
+
+   }
+   }
+
+}
